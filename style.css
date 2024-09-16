@@ -1,0 +1,273 @@
+/* GENERAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: white;
+}
+span{
+    color:#f9c904 ;
+}
+
+h1{
+    font-size: 60px;
+    font-weight: 800;
+}
+a{
+    text-decoration: none;
+    color: #3c5233;
+    font-size: 24px;
+    font-weight: 400;
+    
+}
+ul{
+    list-style: none;
+    text-decoration: none;
+}
+li{
+    display: block;
+    padding: 20px;
+    
+    border-bottom: 1px solid #f9c904;
+    text-align: left;
+    opacity: 0.7;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+li:hover{
+    background:rgba(185, 181, 171,0.6);
+    opacity: 1;
+}
+li:first-child{
+    border-top-left-radius: 20px;
+}
+
+/* MAIN SECTION */
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 100px auto 0;
+    background: linear-gradient(135deg, #3c5233, #6a129c, #3c5233);
+}
+
+.main{
+    width: 70%;
+    text-align: center;
+    margin-top: 30px;
+    color: #9f955b;
+}
+
+.main h1{
+    margin-bottom: 12px;
+}
+.main p{
+    font-size: 24px;
+    font-weight: 500px;
+}
+
+
+/* NAV BAR */
+
+nav{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.logo img{
+   width: 100px;
+    
+}
+
+.nav-links{ 
+    position: absolute;
+    top: 80%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    height: 600px;
+    background: whitesmoke;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    visibility: hidden;
+    overflow: hidden;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+    transform: translate3d(-2rem,0,0);
+    opacity: 0;
+}
+
+.nav-links p{
+    margin-bottom: 5px;
+    color:#b9b5ab;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    visibility: visible;
+    transform: translate3d(0,0,0);
+    opacity: 1;
+    margin-right: 0;
+}
+
+/* BALANCE MENU */
+
+.balance{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+.balance p{
+    color: #b9b5ab;
+    font-size: 30px;
+    font-weight: 600;
+}
+.balance img{
+    width: 48px;
+    height: 48px;
+}
+
+
+/* BUTTONS */
+
+.tap-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+.btn-tap{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    border: none;
+    margin: 15px;
+    background: #f9c904;
+    color: #6a129c;
+    font-size: 40px;
+    font-weight: 500;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+}
+
+.btn-tap img{
+    width: 100px;
+    height: 100px;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+}
+
+.spin{
+    transform: translateY(20px);
+}
+.tap-effect{
+    background: gold;
+    border: 5px solid #b9b5ab;
+    transform: scale(1.2);
+    
+}
+
+.btn-add{
+    width: 110px;
+    height: 60px;
+    border: 1px solid #f9c904;
+    background: none;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #fce434;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 400;
+}
+.add-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    margin: 30px 0;
+}
+
+.tap-button p{
+    color: #f9c904;
+}
+
+
+/* HAMBURGER MENU */
+
+.line {
+    width: 24px;
+    height: 3px;
+    border-radius: 2px;
+    background: #fce434;
+    margin-bottom: 3px;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.btn-toggle:hover .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 3px);
+}
+
+.btn-toggle:hover .line:nth-child(2) {
+    opacity: 0;
+}
+
+.btn-toggle:hover .line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -4px);
+}
+
+.btn-toggle {
+    width: 26px;
+   text-align: center;
+    background: none;
+}
+/* BANNER */
+.banner img{
+    animation: 2s infinite alternate scaly;
+}
+
+/* FOOTER */
+
+footer{
+    width: 65%;
+    text-align: center;
+    color: #b9b5ab;
+    margin-bottom: 10px;
+}
+
+
+/* Animation */
+@keyframes scaly {
+    from{
+        transform: scale(0.6);
+    }
+    to{
+        transform: scale(1);
+    }
+}
